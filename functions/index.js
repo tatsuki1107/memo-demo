@@ -1,9 +1,14 @@
 const functions = require("firebase-functions");
 
-// // Create and Deploy Your First Cloud Functions
-// // https://firebase.google.com/docs/functions/write-firebase-functions
-//
-// exports.helloWorld = functions.https.onRequest((request, response) => {
-//   functions.logger.info("Hello logs!", {structuredData: true});
-//   response.send("Hello from Firebase!");
-// });
+//export const addGenre = functions.https.onRequest(async (req, res)) => {
+//  if (req)
+//}
+
+const onFinish = async () => {
+  try {
+    const addG = await db.collection('genre').add({ genre: genre });
+    console.log('add genre!!', addG.id)
+  } catch (e) {
+    console.error('Error adding document:', e)
+  }
+}
