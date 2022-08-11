@@ -69,7 +69,7 @@ const App = () => {
             className="text-input"
             value={memo}
             onChange={e => setMemo(e.target.value)} />
-          <button onClick={onsubmit}>メモする</button>
+          <button onClick={onsubmit}>送信</button>
         </div>
       </div>
     </section>
